@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Design</string>
+    <string name="addImageIV_contentDescription">Item Image</string>
+    <string name="header_text">Sell</string>
+    <string name="nextB_text">Next</string>
+    <string name="descriptionET_hint">Describe your product..</string>
+    <string name="addImageTV_text">Add Image</string>
+    <string name="titleTV_text">Title</string>
+    <string name="categoryTV_text">Category*</string>
+    <string name="sizeTV_text">Size*</string>
+    <string name="brandTV_text">Brand*</string>
+    <string name="conditionTV_text">Condition*</string>
+    <string name="descriptionTV_text">Description</string>
+    <string name="priceTV_text">Price*</string>
+    <string name="finalPayoutTV_text">Final Payout</string>
+    <string name="origPriceTV_text">Orig. Price</string>
+    <string name="sellerAddressTV_text">Seller Address</string>
+    <string name="fullNameTV_text">Full Name</string>
+    <string name="mobileTV_text">Mobile*</string>
+    <string name="addressTV_text">Address*</string>
+    <string name="cityTV_text">City*</string>
+    <string name="zipCodeTV_text">Zip Code*</string>
+    <string name="countryTV_text">Country</string>
+</resources>

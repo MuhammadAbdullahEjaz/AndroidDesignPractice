@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_marginEnd="12dp">
+
+    <ImageView
+        android:id="@+id/addImageIV"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="2dp"
+        android:background="@drawable/add_image_border"
+        android:contentDescription="@string/addImageIV_contentDescription"
+        android:scaleType="centerInside" />
+
+    <ImageButton
+        android:id="@+id/addImageIVB"
+        android:layout_width="24dp"
+        android:backgroundTint="@color/black"
+        android:src="@drawable/ic_baseline_cancel_24"
+        android:layout_height="24dp"
+        android:layout_gravity="end"/>
+
+</FrameLayout>
