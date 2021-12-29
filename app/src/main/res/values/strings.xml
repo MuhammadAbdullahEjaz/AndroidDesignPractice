@@ -21,4 +21,8 @@
     <string name="cityTV_text">City*</string>
     <string name="zipCodeTV_text">Zip Code*</string>
     <string name="countryTV_text">Country</string>
+    <string name="enableDeliveryTV_text">We coordinate all delivery for you and the buyer (For when your items is sold)</string>
+    <string name="enableDeliveryLableTV_text">Enable Delivery</string>
+    <string name="selfTransferLableTV_text">Self-transfer</string>
+    <string name="selfTransferTV_text">You coordinate the handover yourself (For when your item is sold)</string>
 </resources>

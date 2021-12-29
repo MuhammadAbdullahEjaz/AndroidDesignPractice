@@ -12,16 +12,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val data:List<String> = listOf(
-            "android.resource://com.example.design/drawable/image1",
-            "android.resource://com.example.design/drawable/image2",
-            "android.resource://com.example.design/drawable/image3",
-            "android.resource://com.example.design/drawable/image4",
-            "android.resource://com.example.design/drawable/image5"
-        )
-        val adapter = AddImageRvAdapter()
-        adapter.updateData(data)
-        binding.addImageRV.adapter = adapter
-
     }
 }

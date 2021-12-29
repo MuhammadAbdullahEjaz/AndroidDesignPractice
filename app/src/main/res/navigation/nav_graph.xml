@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/design7">
+
+    <fragment
+        android:id="@+id/design7"
+        android:name="com.example.design.Design7"
+        android:label="Design7" >
+        <action
+            android:id="@+id/action_design7_to_design27"
+            app:destination="@id/design27" />
+    </fragment>
+    <fragment
+        android:id="@+id/design27"
+        android:name="com.example.design.Design27"
+        android:label="Design27" />
+</navigation>

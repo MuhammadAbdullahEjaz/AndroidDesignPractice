@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/scrollViewSV"
+            app:layout_constraintTop_toTopOf="parent"
+            app:elevation="0dp"
+            >
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.Design.AppBar"
+                android:contentInsetLeft="0dp"
+                android:contentInsetStart="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                android:contentInsetRight="0dp"
+                android:contentInsetEnd="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetEnd="0dp" >
+
+                <TextView
+                    android:id="@+id/toolBarTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/header_text"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/toolBarB"
+                    style="@style/Widget.Design.NoOutline"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_baseline_arrow_back_ios_24"
+                    app:iconPadding="0dp"
+                    app:iconSize="24dp" />
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:id="@+id/scrollViewSV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/childCL"
+                android:layout_marginTop="27dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/addImageCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/titleCL"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/addImageRV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="2dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="@id/addImageRL"
+                        app:layout_constraintEnd_toStartOf="@id/addImageRL"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/addImageRL" />
+
+                    <RelativeLayout
+                        android:id="@+id/addImageRL"
+                        android:layout_width="73dp"
+                        android:layout_height="70dp"
+                        android:clickable="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/add_button_border"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:focusable="true">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/addImageB"
+                            android:layout_centerInParent="true"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:backgroundTint="@android:color/white"
+                            android:src="@drawable/add_button_icon" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/addImageTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/addImageTV_text"
+                        android:layout_marginTop="8dp"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/addImageRL"
+                        app:layout_constraintTop_toBottomOf="@id/addImageRL" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/titleCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    app:layout_constraintBottom_toTopOf="@id/categoryCL"
+                    app:layout_constraintTop_toBottomOf="@id/addImageCL"
+                    tools:layout_editor_absoluteX="0dp">
+
+                    <TextView
+                        android:id="@+id/titleTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/titleTV_text"
+                        android:textColor="@color/gray_2"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/categoryCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/rect_border"
+                    app:layout_constraintTop_toBottomOf="@id/titleCL">
+
+                    <TextView
+                        android:id="@+id/categoryTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="13dp"
+                        android:text="@string/categoryTV_text"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/categoryIV"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:src="@drawable/component_187___2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/sizeCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/rbl_lines"
+                    app:layout_constraintBottom_toTopOf="@id/brandCL"
+                    app:layout_constraintTop_toBottomOf="@id/categoryCL">
+
+                    <TextView
+                        android:id="@+id/sizeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/sizeTV_text"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/sizeIV"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:src="@drawable/component_187___2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/brandCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/rbl_lines"
+                    app:layout_constraintBottom_toTopOf="@id/brandCL"
+                    app:layout_constraintTop_toBottomOf="@id/sizeCL">
+
+                    <TextView
+                        android:id="@+id/brandTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/brandTV_text"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/brandIV"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:src="@drawable/component_187___2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/conditionCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/rbl_lines"
+                    app:layout_constraintBottom_toTopOf="@id/descriptionCL"
+                    app:layout_constraintTop_toBottomOf="@id/brandCL">
+
+                    <TextView
+                        android:id="@+id/conditionTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/conditionTV_text"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/conditionIV"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:src="@drawable/component_187___2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/descriptionCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@drawable/rbl_lines"
+                    app:layout_constraintBottom_toTopOf="@id/paymentCL"
+                    app:layout_constraintTop_toBottomOf="@id/conditionCL">
+
+                    <TextView
+                        android:id="@+id/descriptionTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="11dp"
+                        android:text="@string/descriptionTV_text"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@id/descriptionET"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/descriptionET"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:backgroundTint="@color/white"
+                        android:gravity="start"
+                        android:hint="@string/descriptionET_hint"
+                        android:inputType="text|textMultiLine"
+                        android:minHeight="48dp"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/descriptionTV"
+                        app:layout_constraintStart_toStartOf="@+id/descriptionTV"
+                        app:layout_constraintTop_toBottomOf="@id/descriptionTV" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/paymentCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    app:layout_constraintBottom_toTopOf="@id/sellerAddressTV"
+                    app:layout_constraintTop_toBottomOf="@id/descriptionCL">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/priceCL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="11dp"
+                        app:layout_constraintEnd_toStartOf="@id/finalPayoutCL"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/priceTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/priceTV_text"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/priceTIL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:expandedHintEnabled="false"
+                            app:hintEnabled="true"
+                            app:layout_constraintTop_toBottomOf="@id/priceTV"
+                            app:suffixText="Kr."
+                            app:suffixTextColor="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/priceET"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/finalPayoutCL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="11dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@id/priceCL"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/finalPayoutTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/finalPayoutTV_text"
+                            android:textColor="@color/gray_2"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/finalPayoutTIL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            app:expandedHintEnabled="false"
+                            app:hintTextColor="@color/gray_2"
+                            app:layout_constraintTop_toBottomOf="@id/finalPayoutTV"
+                            app:suffixText="Kr."
+                            app:suffixTextColor="@color/gray_2">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/finalPayoutET"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:inputType="number"
+                                app:hintTextColor="@color/gray_2" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/origPriceCL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="16dp"
+                        app:layout_constraintEnd_toEndOf="@id/priceCL"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="@id/priceCL"
+                        app:layout_constraintTop_toBottomOf="@id/priceCL">
+
+                        <TextView
+                            android:id="@+id/origPriceTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/origPriceTV_text"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/origPriceTIL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:expandedHintEnabled="false"
+                            app:layout_constraintTop_toBottomOf="@id/origPriceTV"
+                            app:suffixText="Kr."
+                            app:suffixTextColor="@color/black">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/origPriceET"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/sellerAddressTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="11dp"
+                    android:layout_marginVertical="33dp"
+                    android:text="@string/sellerAddressTV_text"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat_semibold"
+                    app:layout_constraintBottom_toTopOf="@id/fullNameCL"
+                    app:layout_constraintTop_toBottomOf="@id/paymentCL" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/fullNameCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/rect_border"
+                    app:layout_constraintBottom_toTopOf="@id/mobileCL"
+                    app:layout_constraintTop_toBottomOf="@id/sellerAddressTV">
+
+                    <TextView
+                        android:id="@+id/fullNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="11dp"
+                        android:text="@string/fullNameTV_text"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/fullNameIV"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:src="@drawable/component_187___2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mobileCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/rbl_lines"
+                    app:layout_constraintBottom_toTopOf="@id/addressCL"
+                    app:layout_constraintTop_toBottomOf="@id/fullNameCL">
+
+                    <TextView
+                        android:id="@+id/mobileTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="11dp"
+                        android:text="@string/mobileTV_text"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/mobileIV"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:src="@drawable/component_187___2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/addressCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/rbl_lines"
+                    app:layout_constraintBottom_toTopOf="@id/cityCL"
+                    app:layout_constraintTop_toBottomOf="@id/mobileCL">
+
+                    <TextView
+                        android:id="@+id/addressTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="11dp"
+                        android:text="@string/addressTV_text"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/addressIV"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:src="@drawable/component_187___2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cityCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/rbl_lines"
+                    app:layout_constraintBottom_toTopOf="@id/zipCountryCL"
+                    app:layout_constraintTop_toBottomOf="@id/addressCL">
+
+                    <TextView
+                        android:id="@+id/cityTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="11dp"
+                        android:text="@string/cityTV_text"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/cityIV"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="32dp"
+                        android:src="@drawable/component_187___2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/zipCountryCL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="141dp"
+                    android:background="@drawable/rbl_lines"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cityCL">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/zipCL"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        app:layout_constraintEnd_toStartOf="@id/countryCL"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/zipTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="11dp"
+                            android:text="@string/zipCodeTV_text"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/zipIV"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="32dp"
+                            android:src="@drawable/component_187___2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/countryCL"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/rect_border"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toEndOf="@id/zipCL"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/country_heading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="11dp"
+                            android:text="@string/countryTV_text"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/country_status"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="32dp"
+                            android:src="@drawable/component_187___2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextB"
+            android:layout_width="120dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="96dp"
+            android:background="@drawable/rounded_sides"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:insetBottom="0dp"
+            android:text="@string/nextB_text"
+            android:textAllCaps="false"
+            android:textColor="@color/purple_1"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scrollViewSV"
+            app:layout_constraintVertical_chainStyle="spread" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

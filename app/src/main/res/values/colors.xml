@@ -7,9 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="gray_1">#ffefefef</color>
+<!--    <color name="gray_1">#ffefefef</color>-->
+    <color name="gray_1">#F4F4F4</color>
     <color name="gray_2">#ffbebebe</color>
-    <color name="purple_1">#FF8D92C5</color>
-    <color name="purple_2">#268D92C5</color>
+    <color name="purple_1">#FF8D92C3</color>
+    <color name="purple_2">#158D92C3</color>
     <color name="background_fab">#FFFAFAFA</color>
+    <color name="switchTrackColor">#8D92C3</color>
+    <color name="switchThumbColor">#F4F4F4</color>
+
 </resources>
