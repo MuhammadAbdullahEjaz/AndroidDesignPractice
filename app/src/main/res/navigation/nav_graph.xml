@@ -14,6 +14,6 @@
     </fragment>
     <fragment
         android:id="@+id/design27"
-        android:name="com.example.design.Design27"
+        android:name="com.example.design.Design25"
         android:label="Design27" />
 </navigation>

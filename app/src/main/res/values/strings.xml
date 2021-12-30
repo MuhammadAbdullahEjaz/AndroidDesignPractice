@@ -25,4 +25,7 @@
     <string name="enableDeliveryLableTV_text">Enable Delivery</string>
     <string name="selfTransferLableTV_text">Self-transfer</string>
     <string name="selfTransferTV_text">You coordinate the handover yourself (For when your item is sold)</string>
+    <string name="packageSpecsHeadingTV_text">Package Specifications for when you send your sold item with dao</string>
+    <string name="packageSpecsInstructionsTV_text">Choose a format that fits to your item (For when your item is sold)</string>
+    <string name="readMoreTV_text"><u>Read more</u></string>
 </resources>

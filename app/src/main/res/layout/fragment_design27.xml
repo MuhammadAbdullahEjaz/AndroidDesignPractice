@@ -13,34 +13,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
-            app:layout_constraintBottom_toTopOf="@id/scrollViewSV"
             app:elevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/scrollViewSV"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:theme="@style/Widget.Design.AppBar"
-                android:contentInsetLeft="0dp"
                 android:contentInsetStart="0dp"
-                app:contentInsetLeft="0dp"
-                app:contentInsetStart="0dp"
-                android:contentInsetRight="0dp"
+                android:contentInsetLeft="0dp"
                 android:contentInsetEnd="0dp"
+                android:contentInsetRight="0dp"
+                android:theme="@style/Widget.Design.AppBar"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
                 app:contentInsetRight="0dp"
-                app:contentInsetEnd="0dp" >
+                app:contentInsetStart="0dp">
 
                 <TextView
                     android:id="@+id/toolBarTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
                     android:fontFamily="@font/montserrat_medium"
                     android:text="@string/header_text"
-                    android:textAppearance="?attr/textAppearanceHeadline6" />
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/toolBarB"
@@ -65,56 +65,154 @@
             tools:layout_editor_absoluteX="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/enableDeliveryCL"
-                android:layout_marginTop="40dp"
+                android:id="@+id/childCL"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
 
-                <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/enableDelivery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="12.5dp"
-                    android:paddingBottom="2dp"
-                    android:thumb="@drawable/custom_thumb"
-                    app:layout_constraintEnd_toStartOf="@id/enableDeliveryLableTV"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:switchMinWidth="85dp"
-                    app:track="@drawable/custom_track" />
-
-                <TextView
-                    android:id="@+id/enableDeliveryLableTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="12.5dp"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:gravity="center"
-                    android:text="@string/enableDeliveryLableTV_text"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@id/enableDelivery"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@id/enableDelivery"
-                    app:layout_constraintTop_toTopOf="@id/enableDelivery"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <TextView
-                    android:id="@+id/enableDeliveryTV"
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/enableDeliveryCL"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="32dp"
-                    android:layout_marginTop="24dp"
-                    android:text="@string/enableDeliveryTV_text"
-                    android:textColor="@color/black"
-                    android:textSize="12dp"
-                    app:layout_constraintTop_toBottomOf="@id/enableDeliveryLableTV" />
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/enableDeliveryS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12.5dp"
+                        android:thumb="@drawable/custom_thumb"
+                        app:layout_constraintEnd_toStartOf="@id/enableDeliveryLableTV"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:switchMinWidth="85dp"
+                        app:track="@drawable/custom_track" />
+
+                    <TextView
+                        android:id="@+id/enableDeliveryLableTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="12.5dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="center"
+                        android:text="@string/enableDeliveryLableTV_text"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/enableDeliveryS"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toEndOf="@id/enableDeliveryS"
+                        app:layout_constraintTop_toTopOf="@id/enableDeliveryS" />
+
+                    <TextView
+                        android:id="@+id/enableDeliveryTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="32dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/enableDeliveryTV_text"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@id/enableDeliveryLableTV" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/packageSpecsCL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintTop_toBottomOf="@id/enableDeliveryLableTV">
+
+                        <TextView
+                            android:id="@+id/packageSpecsHeadingTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="25dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/packageSpecsHeadingTV_text"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="@id/packageSpecsInstructionsTV"
+                            app:layout_constraintTop_toTopOf="parent" />\
+
+                        <TextView
+                            android:id="@+id/packageSpecsInstructionsTV"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="25dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/packageSpecsInstructionsTV_text"
+                            android:textColor="@color/black"
+                            android:textSize="9sp"
+                            app:layout_constraintTop_toBottomOf="@+id/packageSpecsHeadingTV" />
+
+                        <TextView
+                            android:id="@+id/readMoreTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="25dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:text="@string/readMoreTV_text"
+                            android:textColor="@color/black"
+                            android:textSize="9sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/packageSpecsInstructionsTV" />
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/rect_border"
+                            app:layout_constraintTop_toBottomOf="@id/readMoreTV">
+
+                            <com.example.design.WeightSelectable
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="@drawable/rbl_lines"
+                                app:mainHeading="Light item"
+                                app:subHeading="Smaller garments  jewellery fits into this category (up to 0,5 kg)"
+                                app:currency="DKK"
+                                app:price="42" />
+                            <com.example.design.WeightSelectable
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="@drawable/rbl_lines"
+                                app:mainHeading="Light item"
+                                app:subHeading="Smaller garments  jewellery fits into this category (up to 0,5 kg)"
+                                app:currency="DKK"
+                                app:price="42" />
+                            <com.example.design.WeightSelectable
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="@drawable/rbl_lines"
+                                app:mainHeading="Light item"
+                                app:subHeading="Smaller garments  jewellery fits into this category (up to 0,5 kg)"
+                                app:currency="DKK"
+                                app:price="42" />
+                            <com.example.design.WeightSelectable
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:background="@drawable/rbl_lines"
+                                app:mainHeading="Light item"
+                                app:subHeading="Smaller garments  jewellery fits into this category (up to 0,5 kg)"
+                                app:currency="DKK"
+                                app:price="42" />
+
+
+                        </RadioGroup>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 <androidx.appcompat.widget.SwitchCompat
-                    android:id="@+id/selfTransfer"
+                    android:id="@+id/selfTransferS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="49dp"
@@ -124,7 +222,7 @@
                     app:layout_constraintEnd_toStartOf="@id/selfTransferLableTV"
                     app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/enableDeliveryTV"
+                    app:layout_constraintTop_toBottomOf="@id/enableDeliveryCL"
                     app:switchMinWidth="85dp"
                     app:track="@drawable/custom_track" />
 
@@ -139,11 +237,11 @@
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="@id/selfTransfer"
+                    app:layout_constraintBottom_toBottomOf="@id/selfTransferS"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintStart_toEndOf="@id/selfTransfer"
-                    app:layout_constraintTop_toTopOf="@id/selfTransfer" />
+                    app:layout_constraintStart_toEndOf="@id/selfTransferS"
+                    app:layout_constraintTop_toTopOf="@id/selfTransferS" />
 
                 <TextView
                     android:id="@+id/selfTransferTV"
@@ -164,16 +262,17 @@
             android:layout_width="120dp"
             android:layout_height="34dp"
             android:layout_marginBottom="96dp"
-            android:background="@drawable/rounded_sides"
+            android:background="@drawable/nextb_states"
+            style="@style/Widget.Design.NextButton"
+            android:enabled="false"
+            android:fontFamily="@font/montserrat_medium"
             android:insetLeft="0dp"
             android:insetTop="0dp"
             android:insetRight="0dp"
-            android:fontFamily="@font/montserrat_medium"
             android:insetBottom="0dp"
             android:text="@string/nextB_text"
-            android:textColor="@color/purple_1"
-            android:textSize="14sp"
             android:textAllCaps="false"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

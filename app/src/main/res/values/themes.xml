@@ -22,8 +22,8 @@
         <item name="strokeColor">@color/gray_1</item>
         <item name="strokeWidth">1dp</item>
     </style>
-    <style name="Widget.Desing.NextButton" parent="">
-        <item name="android:strokeColor">@color/purple_1</item>
+    <style name="Widget.Design.NextButton" parent="">
+      <item name="android:textColor">@color/nextb_text_color</item>
     </style>
     <style name="Widget.Design.NoOutline" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="strokeWidth">0dp</item>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WeightSelectable">
+        <attr name="android:enabled" />
+        <attr name="mainHeading" format="string"/>
+        <attr name="subHeading" format="string"/>
+        <attr name="currency" format="string"/>
+        <attr name="price" format="string"/>
+    </declare-styleable>
+</resources>
