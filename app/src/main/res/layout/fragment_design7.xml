@@ -3,58 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-        <com.google.android.material.appbar.AppBarLayout
+        <include layout="@layout/toolbar"
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:backgroundTint="@color/white"
-            app:layout_constraintBottom_toTopOf="@id/scrollViewSV"
-            app:layout_constraintTop_toTopOf="parent"
             app:elevation="0dp"
-            >
+            app:layout_constraintBottom_toTopOf="@id/scrollViewSV"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/Widget.Design.AppBar"
-                android:contentInsetLeft="0dp"
-                android:contentInsetStart="0dp"
-                app:contentInsetLeft="0dp"
-                app:contentInsetStart="0dp"
-                android:contentInsetRight="0dp"
-                android:contentInsetEnd="0dp"
-                app:contentInsetRight="0dp"
-                app:contentInsetEnd="0dp" >
-
-                <TextView
-                    android:id="@+id/toolBarTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="@string/header_text"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/toolBarB"
-                    style="@style/Widget.Design.NoOutline"
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    app:icon="@drawable/ic_baseline_arrow_back_ios_24"
-                    app:iconPadding="0dp"
-                    app:iconSize="24dp" />
-
-            </com.google.android.material.appbar.MaterialToolbar>
-
-        </com.google.android.material.appbar.AppBarLayout>
 
         <ScrollView
             android:id="@+id/scrollViewSV"
@@ -65,10 +31,10 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/childCL"
-                android:layout_marginTop="27dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="12dp">
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="27dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/addImageCL"
@@ -93,17 +59,17 @@
                         android:id="@+id/addImageRL"
                         android:layout_width="73dp"
                         android:layout_height="70dp"
-                        android:clickable="true"
-                        app:layout_constraintEnd_toEndOf="parent"
                         android:background="@drawable/add_button_border"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:focusable="true">
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/addImageB"
-                            android:layout_centerInParent="true"
                             android:layout_width="26dp"
                             android:layout_height="26dp"
+                            android:layout_centerInParent="true"
                             android:backgroundTint="@android:color/white"
                             android:src="@drawable/add_button_icon" />
                     </RelativeLayout>
@@ -112,8 +78,8 @@
                         android:id="@+id/addImageTV"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/addImageTV_text"
                         android:layout_marginTop="8dp"
+                        android:text="@string/addImageTV_text"
                         android:textAppearance="?attr/textAppearanceBody1"
                         android:textSize="12sp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -150,8 +116,10 @@
                     android:id="@+id/categoryCL"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
+                    android:layout_marginTop="8dp"
                     android:background="@drawable/rect_border"
-                    app:layout_constraintTop_toBottomOf="@id/titleCL">
+                    app:layout_constraintTop_toBottomOf="@id/titleCL"
+                    tools:layout_editor_absoluteX="11dp">
 
                     <TextView
                         android:id="@+id/categoryTV"
@@ -183,7 +151,7 @@
                     android:id="@+id/sizeCL"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:background="@drawable/rbl_lines"
+                    android:background="@drawable/lrb_lines"
                     app:layout_constraintBottom_toTopOf="@id/brandCL"
                     app:layout_constraintTop_toBottomOf="@id/categoryCL">
 
@@ -217,7 +185,7 @@
                     android:id="@+id/brandCL"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:background="@drawable/rbl_lines"
+                    android:background="@drawable/lrb_lines"
                     app:layout_constraintBottom_toTopOf="@id/brandCL"
                     app:layout_constraintTop_toBottomOf="@id/sizeCL">
 
@@ -251,7 +219,7 @@
                     android:id="@+id/conditionCL"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:background="@drawable/rbl_lines"
+                    android:background="@drawable/lrb_lines"
                     app:layout_constraintBottom_toTopOf="@id/descriptionCL"
                     app:layout_constraintTop_toBottomOf="@id/brandCL">
 
@@ -285,7 +253,7 @@
                     android:id="@+id/descriptionCL"
                     android:layout_width="match_parent"
                     android:layout_height="140dp"
-                    android:background="@drawable/rbl_lines"
+                    android:background="@drawable/lrb_lines"
                     app:layout_constraintBottom_toTopOf="@id/paymentCL"
                     app:layout_constraintTop_toBottomOf="@id/conditionCL">
 
@@ -331,135 +299,54 @@
                     app:layout_constraintBottom_toTopOf="@id/sellerAddressTV"
                     app:layout_constraintTop_toBottomOf="@id/descriptionCL">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <include
                         android:id="@+id/priceCL"
+                        layout="@layout/price_section"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="11dp"
+                        android:background="@drawable/b_line"
+                        app:heading="@{`Price`}"
+                        app:inputValue="@{``}"
                         app:layout_constraintEnd_toStartOf="@id/finalPayoutCL"
                         app:layout_constraintHorizontal_chainStyle="spread"
                         app:layout_constraintHorizontal_weight="1"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:id="@+id/priceTV"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/priceTV_text"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/priceTIL"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:expandedHintEnabled="false"
-                            app:hintEnabled="true"
-                            app:layout_constraintTop_toBottomOf="@id/priceTV"
-                            app:suffixText="Kr."
-                            app:suffixTextColor="@color/black">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/priceET"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@color/white"
-                                android:inputType="number" />
-
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <include
                         android:id="@+id/finalPayoutCL"
+                        layout="@layout/price_section"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="11dp"
+                        app:heading="@{`Final Payout`}"
+                        app:inputValue="@{``}"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_chainStyle="spread"
                         app:layout_constraintHorizontal_weight="1"
                         app:layout_constraintStart_toEndOf="@id/priceCL"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:id="@+id/finalPayoutTV"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/finalPayoutTV_text"
-                            android:textColor="@color/gray_2"
-                            android:textSize="16sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/finalPayoutTIL"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:enabled="false"
-                            app:expandedHintEnabled="false"
-                            app:hintTextColor="@color/gray_2"
-                            app:layout_constraintTop_toBottomOf="@id/finalPayoutTV"
-                            app:suffixText="Kr."
-                            app:suffixTextColor="@color/gray_2">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/finalPayoutET"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@color/white"
-                                android:inputType="number"
-                                app:hintTextColor="@color/gray_2" />
-
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <include
                         android:id="@+id/origPriceCL"
+                        layout="@layout/price_section"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="16dp"
+                        android:layout_marginTop="60dp"
+                        app:heading="@{`Orig. Price`}"
+                        app:inputValue="@{``}"
                         app:layout_constraintEnd_toEndOf="@id/priceCL"
                         app:layout_constraintHorizontal_chainStyle="spread"
                         app:layout_constraintHorizontal_weight="1"
                         app:layout_constraintStart_toStartOf="@id/priceCL"
-                        app:layout_constraintTop_toBottomOf="@id/priceCL">
-
-                        <TextView
-                            android:id="@+id/origPriceTV"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/origPriceTV_text"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/origPriceTIL"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:expandedHintEnabled="false"
-                            app:layout_constraintTop_toBottomOf="@id/origPriceTV"
-                            app:suffixText="Kr."
-                            app:suffixTextColor="@color/black">
-
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/origPriceET"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@color/white"
-                                android:inputType="number" />
-
-                        </com.google.android.material.textfield.TextInputLayout>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                        app:layout_constraintTop_toBottomOf="@id/priceCL" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
 
                 <TextView
                     android:id="@+id/sellerAddressTV"
@@ -467,241 +354,103 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="11dp"
                     android:layout_marginVertical="33dp"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:text="@string/sellerAddressTV_text"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/montserrat_semibold"
                     app:layout_constraintBottom_toTopOf="@id/fullNameCL"
                     app:layout_constraintTop_toBottomOf="@id/paymentCL" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <include
                     android:id="@+id/fullNameCL"
+                    layout="@layout/address_section"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
                     android:background="@drawable/rect_border"
                     app:layout_constraintBottom_toTopOf="@id/mobileCL"
-                    app:layout_constraintTop_toBottomOf="@id/sellerAddressTV">
+                    app:layout_constraintTop_toBottomOf="@id/sellerAddressTV"
+                    app:title="@{`Full Name*`}"/>
 
-                    <TextView
-                        android:id="@+id/fullNameTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="11dp"
-                        android:text="@string/fullNameTV_text"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/fullNameIV"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="32dp"
-                        android:src="@drawable/component_187___2"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <include
                     android:id="@+id/mobileCL"
+                    layout="@layout/address_section"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:background="@drawable/rbl_lines"
                     app:layout_constraintBottom_toTopOf="@id/addressCL"
-                    app:layout_constraintTop_toBottomOf="@id/fullNameCL">
-
-                    <TextView
-                        android:id="@+id/mobileTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="11dp"
-                        android:text="@string/mobileTV_text"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/mobileIV"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="32dp"
-                        android:src="@drawable/component_187___2"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@id/fullNameCL"
+                    app:title="@{`Mobile*`}" />
 
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <include
                     android:id="@+id/addressCL"
+                    layout="@layout/address_section"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:background="@drawable/rbl_lines"
                     app:layout_constraintBottom_toTopOf="@id/cityCL"
-                    app:layout_constraintTop_toBottomOf="@id/mobileCL">
+                    app:layout_constraintTop_toBottomOf="@id/mobileCL"
+                    app:title="@{`Address`}" />
 
-                    <TextView
-                        android:id="@+id/addressTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="11dp"
-                        android:text="@string/addressTV_text"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/addressIV"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="32dp"
-                        android:src="@drawable/component_187___2"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <include
                     android:id="@+id/cityCL"
+                    layout="@layout/address_section"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:background="@drawable/rbl_lines"
                     app:layout_constraintBottom_toTopOf="@id/zipCountryCL"
-                    app:layout_constraintTop_toBottomOf="@id/addressCL">
+                    app:layout_constraintTop_toBottomOf="@id/addressCL"
+                    app:title="@{`City*`}" />
 
-                    <TextView
-                        android:id="@+id/cityTV"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="11dp"
-                        android:text="@string/cityTV_text"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/cityIV"
-                        android:layout_width="13dp"
-                        android:layout_height="13dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="32dp"
-                        android:src="@drawable/component_187___2"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/zipCountryCL"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="141dp"
-                    android:background="@drawable/rbl_lines"
+                    android:background="@drawable/b_line"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cityCL">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <include
                         android:id="@+id/zipCL"
+                        layout="@layout/address_section"
                         android:layout_width="0dp"
                         android:layout_height="70dp"
                         app:layout_constraintEnd_toStartOf="@id/countryCL"
                         app:layout_constraintHorizontal_chainStyle="spread"
                         app:layout_constraintHorizontal_weight="1"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:title="@{`Zip Code*`}"/>
 
-                        <TextView
-                            android:id="@+id/zipTV"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="11dp"
-                            android:text="@string/zipCodeTV_text"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/zipIV"
-                            android:layout_width="13dp"
-                            android:layout_height="13dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginEnd="32dp"
-                            android:src="@drawable/component_187___2"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    <include
                         android:id="@+id/countryCL"
+                        layout="@layout/address_section"
+                        app:title="@{`Country*`}"
                         android:layout_width="0dp"
                         android:layout_height="70dp"
-                        android:background="@drawable/rect_border"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_chainStyle="spread"
                         app:layout_constraintHorizontal_weight="1"
                         app:layout_constraintStart_toEndOf="@id/zipCL"
-                        app:layout_constraintTop_toTopOf="parent">
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:id="@+id/country_heading"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="11dp"
-                            android:text="@string/countryTV_text"
-                            android:textColor="@color/black"
-                            android:textSize="16sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/country_status"
-                            android:layout_width="13dp"
-                            android:layout_height="13dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginEnd="32dp"
-                            android:src="@drawable/component_187___2"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/nextB"
+            style="@style/Widget.Design.NextButton"
             android:layout_width="120dp"
             android:layout_height="34dp"
-            android:layout_marginBottom="96dp"
-            android:background="@drawable/nextb_states"
-            style="@style/Widget.Design.NextButton"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/purple_button_drawable"
             android:enabled="true"
+            android:fontFamily="@font/montserrat_medium"
             android:insetLeft="0dp"
             android:insetTop="0dp"
             android:insetRight="0dp"
-            android:fontFamily="@font/montserrat_medium"
             android:insetBottom="0dp"
             android:text="@string/nextB_text"
             android:textAllCaps="false"
@@ -709,7 +458,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/scrollViewSV"
             app:layout_constraintVertical_chainStyle="spread" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

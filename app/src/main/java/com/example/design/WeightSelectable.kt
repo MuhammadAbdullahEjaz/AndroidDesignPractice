@@ -1,6 +1,7 @@
 package com.example.design
 
 import android.content.Context
+import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.Checkable
@@ -17,10 +18,10 @@ class WeightSelectable @JvmOverloads constructor(
 
     private var checkState: Boolean = false
 
-    private var mainHeadingText: String
-    private var subHeadingText: String
-    private var priceText: String
-    private var currencyText: String
+    var mainHeadingText: String
+    var subHeadingText: String
+    var priceText: String
+    var currencyText: String
 
     private lateinit var mainHeadingTV: TextView
     private lateinit var subHeadingTV: TextView
@@ -61,6 +62,10 @@ class WeightSelectable @JvmOverloads constructor(
         priceTV.text = priceText
         currencyTV.text = currencyText
 
+        mainHeadingTV.setTextColor(ContextCompat.getColor(context, android.R.color.black))
+        subHeadingTV.setTextColor(ContextCompat.getColor(context, android.R.color.black))
+        priceTV.setTextColor(ContextCompat.getColor(context, android.R.color.black))
+        currencyTV.setTextColor(ContextCompat.getColor(context, android.R.color.black))
 
     }
 
@@ -93,9 +98,24 @@ class WeightSelectable @JvmOverloads constructor(
         isChecked = !checkState
     }
 
-    override fun performClick(): Boolean {
-        toggle()
-        return super.performClick()
+    fun setMainHeading(string: String){
+        mainHeadingText = string
+        mainHeadingTV.text = mainHeadingText
+    }
+
+    fun setSubHeading(string: String){
+        subHeadingText = string
+        subHeadingTV.text = subHeadingText
+    }
+
+    fun setCurrency(string: String){
+        currencyText = string
+        currencyTV.text = currencyText
+    }
+
+    fun setPrice(string: String){
+        priceText = string
+        priceTV.text = priceText
     }
 
 }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="heading"
+            type="String" />
+
+        <variable
+            name="inputValue"
+            type="String"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/b_line">
+
+        <TextView
+            android:id="@+id/sectionHeadingTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{heading}"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/sectionInputET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="@{inputValue}"
+            android:background="@drawable/border_none"
+            android:inputType="number"
+            android:textCursorDrawable="@drawable/cursor"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/sectionCurrecnyTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sectionHeadingTV" />
+
+        <TextView
+            android:id="@+id/sectionCurrecnyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kr."
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/sectionInputET"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

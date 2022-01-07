@@ -23,7 +23,7 @@
         <item name="strokeWidth">1dp</item>
     </style>
     <style name="Widget.Design.NextButton" parent="">
-      <item name="android:textColor">@color/nextb_text_color</item>
+      <item name="android:textColor">@color/purple_button_color</item>
     </style>
     <style name="Widget.Design.NoOutline" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="strokeWidth">0dp</item>

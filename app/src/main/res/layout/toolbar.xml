@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentInsetStart="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetEnd="0dp"
+            android:contentInsetRight="0dp"
+            android:theme="@style/Widget.Design.AppBar"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <TextView
+                android:id="@+id/toolBarTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/header_text"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/toolBarB"
+                style="@style/Widget.Design.NoOutline"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/path_2211"
+                app:iconPadding="0dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </androidx.appcompat.widget.Toolbar>
+</layout>

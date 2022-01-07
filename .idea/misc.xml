@@ -5,33 +5,57 @@
       <map>
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/add_button_border.xml" value="0.1685185185185185" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/add_image_border.xml" value="0.1685185185185185" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/b_line.xml" value="0.17685185185185184" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/border_none.xml" value="0.2203125" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/bottom_line.xml" value="0.2203125" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/circle.xml" value="0.21" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/circular_side.xml" value="0.20462962962962963" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/cursor.xml" value="0.1390625" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/custom_thumb.xml" value="0.2169230769230769" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/custom_track.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/gray_button.xml" value="0.2203125" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/group_2878.xml" value="0.1125" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/group_2878__2_.xml" value="0.14166666666666666" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/heart_1.xml" value="0.2203125" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1685185185185185" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/ic_baseline_cancel_24.xml" value="0.1935185185185185" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/ic_group_2878__2_.xml" value="0.14166666666666666" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/image_border.xml" value="0.1685185185185185" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/lrb_lines.xml" value="0.2203125" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/nextb_states.xml" value="0.2203125" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/path_2211.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/rbl_lines.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/rect_border.xml" value="0.17685185185185184" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/rlb_lines.xml" value="0.2203125" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/rounded_sides.xml" value="0.2046875" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/selected_image_border.xml" value="0.2203125" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/selection_group_border.xml" value="0.2203125" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/tlb.xml" value="0.2203125" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/tlb_lines.xml" value="0.2203125" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/drawable/tlr.xml" value="0.2203125" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/add_image_rv_item.xml" value="2.0" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/address_section.xml" value="0.25" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/appbar.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/bottom_sheet_category.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/custom_selectable_for_package_weight.xml" value="0.2" />
-        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/fragment_design27.xml" value="0.1" />
-        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/fragment_design7.xml" value="0.34285714285714286" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/detail_section_item_postadd.xml" value="0.42913385826771655" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/final_payout_section.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/fragment_design27.xml" value="0.22" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/fragment_design28.xml" value="0.25" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/fragment_design30.xml" value="0.22" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/fragment_design7.xml" value="0.25" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/item_card.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/main_activity.xml" value="0.1" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/orig_price_section.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/page_7.xml" value="0.1" />
-        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/weight_selectable.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/price_section.xml" value="0.25" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/text.xml" value="0.25" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/toolbar.xml" value="0.30982019363762103" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/user_section_item_postadd.xml" value="0.2" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/weight_selectable.xml" value="0.33" />
+        <entry key="..\:/Users/Quantum/AndroidStudioProjects/Design/app/src/main/res/layout/weight_selectable_rv_item.xml" value="0.1" />
       </map>
     </option>
   </component>

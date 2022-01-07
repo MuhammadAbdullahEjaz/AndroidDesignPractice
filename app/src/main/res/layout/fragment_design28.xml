@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <include layout="@layout/toolbar"
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/mainCL"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainCL"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/bankInfoEditGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="bankInfoNote1, bankInfoNote2, regNoTIL, accountNoTIL" />
+
+            <TextView
+                android:id="@+id/bankInfoHeadingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="@string/bankInfoHeadingTV_text"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/bankInfoIconIV"
+                android:layout_width="42dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/card"
+                app:layout_constraintBottom_toBottomOf="@id/bankInfoHeadingTV"
+                app:layout_constraintStart_toEndOf="@id/bankInfoHeadingTV"
+                app:layout_constraintTop_toTopOf="@id/bankInfoHeadingTV" />
+
+            <TextView
+                android:id="@+id/bankInfoNote1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/bankInfoNote1_text"
+                android:textSize="11sp"
+                app:layout_constraintTop_toBottomOf="@id/bankInfoIconIV" />
+
+            <TextView
+                android:id="@+id/bankInfoNote2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/bankInfoNote2_text"
+                android:textSize="11sp"
+                app:layout_constraintTop_toBottomOf="@id/bankInfoNote1" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/accountNoPrevTIL"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/rect_border"
+                android:hint="@string/accountNoTIL_hint"
+                android:paddingStart="1dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="1dp"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/box_color_material_til"
+                app:boxStrokeWidthFocused="1dp"
+                app:endIconCheckable="true"
+                app:endIconDrawable="@drawable/ic_baseline_check_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/gray_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bankInfoHeadingTV">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/accountNoPrevTI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:text="76**************8763"
+                    android:textAlignment="center" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/regNoTIL"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rect_border"
+                android:hint="@string/regNoTIL_text"
+                android:paddingStart="1dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="1dp"
+                app:boxStrokeColor="@color/box_color_material_til"
+                app:boxStrokeWidthFocused="1dp"
+                app:hintTextColor="@color/gray_2"
+                app:layout_constraintEnd_toStartOf="@id/accountNoTIL"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bankInfoNote2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/regNoTI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:textAlignment="center" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/accountNoTIL"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/tlb"
+                android:hint="@string/accountNoTIL_hint"
+                android:paddingStart="1dp"
+                android:paddingTop="1dp"
+                android:paddingEnd="1dp"
+                app:boxStrokeColor="@color/box_color_material_til"
+                app:boxStrokeWidthFocused="1dp"
+                app:hintTextColor="@color/gray_2"
+                app:layout_constraintBottom_toBottomOf="@id/regNoTIL"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintStart_toEndOf="@id/regNoTIL"
+                app:layout_constraintTop_toTopOf="@id/regNoTIL">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/accountNoTI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:inputType="number"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:textAlignment="center" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/previewAdB"
+            android:textColor="@color/purple_button_color"
+            android:layout_width="165dp"
+            android:layout_height="34dp"
+            android:visibility="gone"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/purple_button_drawable"
+            android:enabled="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/previewAdB_text"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveB"
+            android:textColor="@color/purple_button_color"
+            android:layout_width="120dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/purple_button_drawable"
+            android:enabled="true"
+            android:fontFamily="@font/montserrat_medium"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/saveB_text"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/buttonMainTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="12sp"
+        android:text="Heading"
         android:layout_marginHorizontal="14dp"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2.5dp"
         android:width="130dp"
+        android:text="SubHeading"
         android:layout_marginHorizontal="14dp"
         android:textSize="7sp"
         app:layout_constraintVertical_chainStyle="packed"
@@ -32,6 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="11sp"
+        android:text="46"
         android:layout_marginEnd="45dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -43,9 +49,10 @@
         android:layout_height="wrap_content"
         android:textSize="11sp"
         android:layout_marginEnd="2dp"
+        android:text="DKK"
         app:layout_constraintEnd_toStartOf="@id/priceTV"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-</merge>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <include
+            android:id="@+id/appBarLayout"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/white"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/scrollViewSV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scrollViewSV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mainCL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/appBarLayout">
+
+                <TextView
+                    android:id="@+id/categoryHeaderTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Ganni, dress"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/favoriteIB" />
+
+                <ImageButton
+                    android:id="@+id/favoriteIB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="12dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:src="@drawable/heart_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/descriptionTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="15dp"
+
+                    android:layout_marginEnd="32dp"
+                    android:text="Really nice GANNI dress, almost new and with no trace of wear… Show more"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    app:layout_constraintTop_toBottomOf="@id/favoriteIB" />
+
+                <ImageView
+                    android:id="@+id/thumbNailImageIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/image3"
+                    app:layout_constraintTop_toBottomOf="@id/descriptionTV" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buyB"
+                    android:layout_width="67dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/purple_button_drawable"
+                    android:enabled="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:text="Buy"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple_button_color"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/thumbNailImageIV" />
+
+                <TextView
+                    android:id="@id/priceTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:text="kr. 45"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/buyB"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/buyB" />
+
+                <TextView
+                    android:id="@+id/opTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="13dp"
+                    android:text="OP kr. 800"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/priceTV" />
+
+                <TextView
+                    android:id="@+id/deliveryOptionTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:text="Delivery with Dao"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="@id/opTV"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <include layout="@layout/user_section_item_postadd"
+                    android:id="@+id/userIV"
+                    app:name="@{`King Luvis`}"
+                    app:location="@{`Copenhagen`}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/opTV"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/chatB"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/purple_button_drawable"
+                    android:backgroundTint="@color/gray_1.2"
+                    android:enabled="true"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:text="Chat"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/userIV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/userIV" />
+
+                <TextView
+                    android:id="@+id/detailsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Details"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userIV" />
+
+                <include
+                    android:id="@+id/category"
+                    layout="@layout/detail_section_item_postadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="32dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:heading="@{`Category`}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/detailsTV"
+                    app:value="@{`Clothes, Dress`}" />
+
+                <include
+                    android:id="@+id/brand"
+                    layout="@layout/detail_section_item_postadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:heading="@{`Brand`}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/category"
+                    app:value="@{`Ganni`}" />
+
+                <include
+                    android:id="@+id/size"
+                    layout="@layout/detail_section_item_postadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:heading="@{`Size`}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/brand"
+                    app:value="@{`38`}" />
+
+                <include
+                    android:id="@+id/condition"
+                    layout="@layout/detail_section_item_postadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:heading="@{`Condition`}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/size"
+                    app:value="@{`Good as new`}" />
+
+                <include
+                    android:id="@+id/color"
+                    layout="@layout/detail_section_item_postadd"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="150dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:heading="@{`Color`}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/condition"
+                    app:value="@{`Orange`}" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/editB"
+                    android:layout_width="92dp"
+                    android:layout_height="34dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/purple_button_drawable"
+                    android:backgroundTint="@color/gray_1.2"
+                    android:enabled="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/editB_text"
+                    android:textAllCaps="false"
+                    android:textSize="11sp"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/postAdB"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/postAdB"
+                    android:layout_marginStart="5dp"
+                    android:layout_width="165dp"
+                    android:layout_height="34dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/purple_button_drawable"
+                    android:enabled="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/postAdB_text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple_button_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/editB" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

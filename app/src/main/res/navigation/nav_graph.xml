@@ -14,6 +14,22 @@
     </fragment>
     <fragment
         android:id="@+id/design27"
-        android:name="com.example.design.Design25"
-        android:label="Design27" />
+        android:name="com.example.design.Design27"
+        android:label="Design27" >
+        <action
+            android:id="@+id/action_design27_to_design28"
+            app:destination="@id/design28" />
+    </fragment>
+    <fragment
+        android:id="@+id/design28"
+        android:name="com.example.design.Design28"
+        android:label="Design28" >
+        <action
+            android:id="@+id/action_design28_to_design30"
+            app:destination="@id/design30" />
+    </fragment>
+    <fragment
+        android:id="@+id/design30"
+        android:name="com.example.design.Design30"
+        android:label="Design30" />
 </navigation>
